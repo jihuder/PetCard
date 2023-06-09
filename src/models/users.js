@@ -1,7 +1,7 @@
 const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
 
-const Pets = require('./pets')
+const Pets = require('./pets.js')
 
 const Users = db.define("users", {
   id: {
@@ -20,17 +20,10 @@ const Users = db.define("users", {
       isEmail: true,
     },
   },
-  password: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
   pets_id: {
-    type: DataTypes.INTEGER,
-    references:{
-      model: Pets,
-      key: 'id'
-    }
+    type: DataTypes.UUID, // Cambio el tipo de dato a INTEGER
   },
 });
+
 
 module.exports = Users;

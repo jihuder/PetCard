@@ -3,8 +3,8 @@ const { DataTypes } = require("sequelize");
 
 const Pets = db.define("pets", {
   id: {
-    type: DataTypes.INTEGER, 
-    autoIncrement: true,
+    type: DataTypes.INTEGER, // Cambio el tipo de dato a UUID
+    defaultValue: DataTypes.UUIDV4, // Agrego el valor por defecto
     primaryKey: true,
   },
   name: {
@@ -21,4 +21,4 @@ const Pets = db.define("pets", {
   }
 });
 
-module.exports = Pets;
+module.exports = Pets
