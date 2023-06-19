@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background-image:url("Images/bgLogIn.png");
+}
+.wrapper{
+  width: 330px;
+  padding: 2rem 0 1rem 0;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(10, 105, 143, 0.1);
+}
+h1{
+  font-size: 2rem;
+  color: #073b9b;
+}
+p{
+  margin-bottom: 1.7rem;}
+
+
+nav a{
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    line-height: 50%;
+    font-weight: bold;
+    border: radius 5px;
+    transition: all 1s;
+    display: block;
+    float: left;
+    transition: all 1s;
+}
+
+form{
+  width: 90%;
+  outline: none;
+  border: none;
+  background: #dfe9f5;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+button{
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding: 8px 0;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 85%;
+  background: #084CB1;
+  color: rgb(0,0,0);
+  cursor: pointer;
+}
+button:hover{
+  background: rgba(6, 145, 226, 0.767);
+}
+.or{
+  font-size: 0.8rem;
+  margin-top: 1.5rem;}
+
+.icons i{
+  color: #07001f;
+  padding: 00.6rem 1.2rem;
+  border-radius: 4px;
+  margin-left: .2rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid #dfe9f5;
+}
+.icons i:hover{
+  color: #fff !important;
+  background: #07001f;
+  transition: 1s;
+}
+.icons i:first-child{
+  color: red;
+}
+.icons i:last-child{
+  color: blue;
+}
+.not_member{
+  font-size: 0.8rem;
+  margin-top: 1.4rem;
+  
+}
+.not_member a{
+  color: rgb(146, 207, 218);
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}

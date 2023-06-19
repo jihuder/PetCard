@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Profile Information</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="profile.css">
+</head>
+<header id="cabeza">
+  <div class="content">
+    <img src="Images/Animal (2).svg" alt="Animal" id="logo">
+
+  </div>
+</header>
+
+<body>
+  <h1 id="title2" style="color: rgb(25, 23, 150);"> Nice to see you again !</h1>
+  <div class="container">
+    <div class="about-me">
+      <h2>About Me:</h2>
+      <img src="Images/pic_aboutme.png" alt="aboutme" />
+      <br>
+      <p>
+        <strong>Name:</strong> <span id="nameOutput"></span><br>
+        <strong>ID Number:</strong> <span id="idOutput"></span><br>
+        <strong>Date of Birth:</strong> <span id="dobOutput"></span><br>
+        <strong>Phone Number:</strong> <span id="phoneOutput"></span><br>
+        <strong>Address:</strong> <span id="addressOutput"></span><br>
+        <strong>City:</strong> <span id="cityOutput"></span><br>
+      </p>
+      <button onclick="logout()">Logout
+        <a href="LogIn.html" id="link1">Logout</a>
+    </div>
+    <div class="friends">
+      <h2>My Friends:</h2>
+      <p><img src="Images/Gardfiel 1.png" alt="friend1" /><br>
+        <button type="button" onclick="sendRequest('Friend 1')">Friend 1</button>
+      </p>
+      <p><img src="Images/Scooby 1.png" alt="friend2" /><br>
+        <button type="button" onclick="sendRequest('Friend 2')">Friend 2</button>
+      </p><br>
+      <button type="button" onclick="sendRequest('Friend 3')">Friend 3</button>
+    </div>
+  </div>
+
+  <script>
+    function logout() {
+    }
+
+    function sendRequest(friendName) {
+      console.log("Sending request to:", friendName);
+    }
+  </script>
+</body>
+
+</html>

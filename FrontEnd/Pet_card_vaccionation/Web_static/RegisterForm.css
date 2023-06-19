@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url("Images/bgLogIn.png");
+}
+
+h3 {
+  color: rgb(2, 38, 59);
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.petOwnerForm {
+  width: 40%;
+  padding: 20px;
+  border: 2px solid rgb(49, 169, 199);
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  background-color: rgb(24, 117, 153);
+  text-align:justify;
+  float: left;
+}
+
+.myFriendForm {
+  width: 40%;
+  padding: 20px;
+  border: 2px solid rgb(49, 169, 199);
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  background-color: rgb(24, 117, 153);
+  text-align: center;
+  float: right;
+}

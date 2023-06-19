@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="RegisterForm.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>Register Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="petOwnerForm">
+      <h3>Pet Owner </h3> <br>
+      <img src="Images/Petowner.jpg" alt="Petownerpic" />
+
+      <div>
+        <br>
+        <label for="petOwnerId" style="color: white;">ID:</label>
+        <input type="text" id="petOwnerId" name="petOwnerId" required>
+      </div>
+      <span id="displayPetOwnerId"></span>
+      <br>
+      <div>
+        <label for="petOwnerFullName" style="color: white;">Full Name:</label>
+        <input type="text" id="petOwnerFullName" name="petOwnerFullName" required>
+      </div>
+      <span id="displayPetOwnerFullName"></span>
+      <br>
+      <div>
+        <label for="petOwnerDob" style="color: white;">Date of Birth:</label>
+        <input type="date" id="petOwnerDob" name="petOwnerDob" required>
+      </div>
+      <span id="displayPetOwnerDob"></span>
+      <br>
+      <div>
+        <label for="petOwnerPhoneNumber" style="color: white;">Phone Number:</label>
+        <input type="tel" id="petOwnerPhoneNumber" name="petOwnerPhoneNumber" required>
+      </div>
+      <span id="displayPetOwnerPhoneNumber"></span>
+      <br>
+      <div>
+        <label for="petOwnerEmail" style="color: white;">Email:</label>
+        <input type="email" id="petOwnerEmail" name="petOwnerEmail" required>
+      </div>
+      <span id="displayPetOwnerEmail"></span>
+      <br>
+      <div>
+        <label for="petOwnerAddress" style="color: white;">Address:</label>
+        <input type="text" id="petOwnerAddress" name="petOwnerAddress" required>
+      </div>
+      <span id="displayPetOwnerAddress"></span>
+      <br>
+      <div>
+        <label for="petOwnerCity" style="color: white;">City:</label>
+        <input type="text" id="petOwnerCity" name="petOwnerCity" required>
+      </div>
+      <span id="displayPetOwnerCity"></span>
+      <br>
+      <div>
+        <input type="checkbox" id="petOwnerTerms" name="petOwnerTerms" required>
+        <label for="petOwnerTerms">Terms and conditions</label>
+      </div>
+      <br>
+      <div>
+        <button onclick="fillPetOwnerLabels()">Register</button>
+      </div>
+    </div>
+
+    <div class="myFriendForm">
+      <h3 style="font-weight: bold;">My Friend</h3><br>
+      <img src="Images/imgRF.jpg" alt="MyFriendpic" />
+      <div>
+        <br>
+        <label for="friendName" style="color: white;">Name:</label>
+        <input type="text" id="friendName" name="friendName" required>
+      </div>
+      <span id="displayFriendName"></span>
+      <br>
+      <div>
+        <label for="friendId" style="color: white;">ID:</label>
+        <input type="text" id="friendId" name="friendId" required>
+      </div>
+      <span id="displayFriendId"></span>
+      <br>
+      <div>
+        <label for="friendType" style="color: white;">Type:</label>
+        <input type="text" id="friendType" name="friendType" required>
+      </div>
+      <span id="displayFriendType"></span>
+      <br>
+      <div>
+        <label for="friendDob" style="color: white;">Date of Birth:</label>
+        <input type="date" id="friendDob" name="friendDob" required>
+      </div>
+      <span id="displayFriendDob"></span>
+      <br>
+      <div>
+        <label for="friendSex" style="color: white;">Sex:</label>
+        <input type="text" id="friendSex" name="friendSex" required>
+      </div>
+      <span id="displayFriendSex"></span>
+      <br>
+      <div>
+        <label for="friendRaza" style="color: white;">Breed:</label>
+        <input type="text" id="friendRaza" name="friendRaza" required>
+      </div>
+      <span id="displayFriendRaza"></span>
+      <br>
+      <div>
+        <label for="friendColor" style="color: white;">Color:</label>
+        <input type="text" id="friendColor" name="friendColor" required>
+      </div>
+      <span id="displayFriendColor"></span>
+      <br>
+      <div>
+        <input type="checkbox" id="friendTerms" name="friendTerms" required>
+        <label for="friendTerms">Terms and conditions</label>
+      </div>
+      <br>
+      <div>
+        <button onclick="fillFriendLabels()">Add Pet</button>
+      </div>
+    </div>
+
+    <script>
+      function fillPetOwnerLabels() {
+        var petOwnerId = document.getElementById("petOwnerId").value;
+        var petOwnerFullName = document.getElementById("petOwnerFullName").value;
+        var petOwnerDob = document.getElementById("petOwnerDob").value;
+        var petOwnerPhoneNumber = document.getElementById("petOwnerPhoneNumber").value;
+        var petOwnerEmail = document.getElementById("petOwnerEmail").value;
+        var petOwnerAddress = document.getElementById("petOwnerAddress").value;
+        var petOwnerCity = document.getElementById("petOwnerCity").value;
+        var petOwnerTerms = document.getElementById("petOwnerTerms").checked;
+
+        if (petOwnerId === "" || petOwnerFullName === "" || petOwnerDob === "" || petOwnerPhoneNumber === "" || petOwnerEmail === "" || petOwnerAddress === "" || petOwnerCity === "" || !petOwnerTerms) {
+          alert("Please fill out all the fields and agree to the terms and conditions.");
+          return;
+        }
+
+        // Fill labels here
+        document.getElementById("petOwnerIdLabel").textContent = petOwnerId;
+        document.getElementById("petOwnerFullNameLabel").textContent = petOwnerFullName;
+        document.getElementById("petOwnerDobLabel").textContent = petOwnerDob;
+        document.getElementById("petOwnerPhoneNumberLabel").textContent = petOwnerPhoneNumber;
+        document.getElementById("petOwnerEmailLabel").textContent = petOwnerEmail;
+        document.getElementById("petOwnerAddressLabel").textContent = petOwnerAddress;
+        document.getElementById("petOwnerCityLabel").textContent = petOwnerCity;
+
+        // Reset fields
+        resetPetOwnerFields();
+        document.getElementById("registerButton").style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+      }
+
+      function fillFriendLabels() {
+        var friendName = document.getElementById("friendName").value;
+        var friendId = document.getElementById("friendId").value;
+        var friendType = document.getElementById("friendType").value;
+        var friendDob = document.getElementById("friendDob").value;
+        var friendSex = document.getElementById("friendSex").value;
+        var friendRaza = document.getElementById("friendRaza").value;
+        var friendColor = document.getElementById("friendColor").value;
+        var friendTerms = document.getElementById("friendTerms").checked;
+
+        if (friendName === "" || friendId === "" || friendType === "" || friendDob === "" || friendSex === "" || friendRaza === "" || friendColor === "" || !friendTerms) {
+          alert("Please fill out all the fields and agree to the terms and conditions.");
+          return;
+        }
+
+        // Fill labels here
+        document.getElementById("friendNameLabel").textContent = friendName;
+        document.getElementById("friendIdLabel").textContent = friendId;
+        document.getElementById("friendTypeLabel").textContent = friendType;
+        document.getElementById("friendDobLabel").textContent = friendDob;
+        document.getElementById("friendSexLabel").textContent = friendSex;
+        document.getElementById("friendRazaLabel").textContent = friendRaza;
+        document.getElementById("friendColorLabel").textContent = friendColor;
+
+        // Reset fields
+        resetFriendFields();
+        document.getElementById("addPetButton").style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+      }
+
+      function resetPetOwnerFields() {
+        document.getElementById("petOwnerId").value = "";
+        document.getElementById("petOwnerFullName").value = "";
+        document.getElementById("petOwnerDob").value = "";
+        document.getElementById("petOwnerPhoneNumber").value = "";
+        document.getElementById("petOwnerEmail").value = "";
+        document.getElementById("petOwnerAddress").value = "";
+        document.getElementById("petOwnerCity").value = "";
+        document.getElementById("petOwnerTerms").checked = false;
+        document.getElementById("registerButton").style.boxShadow = "none";
+      }
+
+      function resetFriendFields() {
+        document.getElementById("friendName").value = "";
+        document.getElementById("friendId").value = "";
+        document.getElementById("friendType").value = "";
+        document.getElementById("friendDob").value = "";
+        document.getElementById("friendSex").value = "";
+        document.getElementById("friendRaza").value = "";
+        document.getElementById("friendColor").value = "";
+        document.getElementById("friendTerms").checked = false;
+        document.getElementById("addPetButton").style.boxShadow = "none";
+      }
+
+    </script>
+
+</body>
+
+</html>
